@@ -79,4 +79,4 @@ In a Rails application, this could go into `config/initializers/geonames.rb`.
 
     1. Adam Wisniewski
     2. Nicolas Marchildon (elecnix)
-
+    3. Chris Griego
