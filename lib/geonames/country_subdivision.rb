@@ -17,26 +17,16 @@
 #=============================================================================
 
 module Geonames
-  class WikipediaArticle
+  class CountrySubdivision
+    attr :country_code
+    attr :country_name
+    attr :admin_code_1
+    attr :admin_name_1
+    attr :code_fips
+    attr :code_iso
 
-    attr :language
-    attr :title
-    attr :summary
-    attr :wikipedia_url
-    attr :feature
-    attr :population
-    attr :elevation
-    attr :latitude
-    attr :longitude
-    attr :thumbnail_img
-    attr :distance
-
-    attr_writer :language, :title, :summary
-    attr_writer :wikipedia_url, :feature, :population
-    attr_writer :elevation, :latitude, :longitude
-    attr_writer :thumbnail_img, :distance
-
+    attr_writer :country_code, :country_name
+    attr_writer :admin_name_1, :admin_code_1
+    attr_writer :code_fips, :code_iso
   end
 end
-
-

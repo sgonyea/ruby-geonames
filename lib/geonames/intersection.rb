@@ -1,6 +1,6 @@
 #=============================================================================
 #
-# Copyright 2010 Jan Schwenzien <jan@schwenzien.info>
+# Copyright 2007 Adam Wisniewski <adamw@tbcn.ca>
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not
 # use this file except in compliance with the License. You may obtain a copy of
@@ -17,33 +17,24 @@
 #=============================================================================
 
 module Geonames
-  class Config
-    @@default_base_url = "http://ws.geonames.org"
-    @@default_lang     = "en"
-    @@default_username = nil
+  class Intersection
+    attr :street_1
+    attr :street_2
+    attr :latitude
+    attr :longitude
+    attr :distance
+    attr :postal_code
+    attr :place_name
+    attr :country_code
+    attr :admin_code_1
+    attr :admin_name_2
+    attr :admin_code_2
+    attr :admin_name_1
 
-    def base_url
-      @base_url || @@default_base_url
-    end
-
-    def base_url=(base_url)
-      @base_url = base_url
-    end
-
-    def lang
-      @lang || @@default_lang
-    end
-
-    def lang=(lang)
-      @lang = lang
-    end
-
-    def username
-      @username || @@default_username
-    end
-
-    def username=(username)
-      @username = username
-    end
+    attr_writer :street_1, :street_2
+    attr_writer :postal_code, :place_name, :country_code
+    attr_writer :latitude, :longitude, :admin_name_1
+    attr_writer :admin_code_1, :admin_name_2, :admin_code_2
+    attr_writer :distance
   end
 end

@@ -1,6 +1,6 @@
 #=============================================================================
 #
-# Copyright 2010 Jan Schwenzien <jan@schwenzien.info>
+# Copyright 2007 Adam Wisniewski <adamw@tbcn.ca>
 #
 # Licensed under the Apache License, Version 2.0 (the "License"); you may not
 # use this file except in compliance with the License. You may obtain a copy of
@@ -17,33 +17,15 @@
 #=============================================================================
 
 module Geonames
-  class Config
-    @@default_base_url = "http://ws.geonames.org"
-    @@default_lang     = "en"
-    @@default_username = nil
+  class Timezone
+    attr :timezone_id
+    attr :gmt_offset
+    attr :dst_offset
 
-    def base_url
-      @base_url || @@default_base_url
-    end
+    attr_writer :timezone_id, :gmt_offset, :dst_offset
 
-    def base_url=(base_url)
-      @base_url = base_url
-    end
-
-    def lang
-      @lang || @@default_lang
-    end
-
-    def lang=(lang)
-      @lang = lang
-    end
-
-    def username
-      @username || @@default_username
-    end
-
-    def username=(username)
-      @username = username
+    def tzinfo
+      TZInfo::Timezone.get(timezone_id)
     end
   end
 end
