@@ -8,7 +8,7 @@ Created by [TouchBase Counsulting](http://www.tbcn.ca/geonames) to support GIS p
 
 Install from the command line:
 
-    sudo gem install elecnix-ruby-geonames
+    sudo gem install ruby-geonames
 
 ## Examples
 
