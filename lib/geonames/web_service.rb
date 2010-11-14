@@ -150,7 +150,7 @@ module Geonames
       postal_codes = []
 
       url = "/postalCodeSearch?a=a"
-      url = url + search_criteria.to_query_params_string
+      url << search_criteria.to_query_params_string
 
       res = make_request(url, args)
 
@@ -168,7 +168,7 @@ module Geonames
       postal_codes = []
 
       url = "/findNearbyPostalCodes?a=a"
-      url = url + search_criteria.to_query_params_string
+      url << search_criteria.to_query_params_string
 
       res = make_request(url, args)
 
@@ -186,8 +186,8 @@ module Geonames
 
       url = "/findNearbyPlaceName?a=a"
 
-      url = url + "&lat=" + lat.to_s
-      url = url + "&lng=" + long.to_s
+      url << "&lat=" + lat.to_s
+      url << "&lng=" + long.to_s
 
       res = make_request(url, args)
 
@@ -203,8 +203,8 @@ module Geonames
     def find_nearest_intersection(lat, long, *args)
       url = "/findNearestIntersection?a=a"
 
-      url = url + "&lat=" + lat.to_s
-      url = url + "&lng=" + long.to_s
+      url << "&lat=" + lat.to_s
+      url << "&lng=" + long.to_s
 
       res = make_request(url, args)
 
@@ -225,7 +225,7 @@ module Geonames
       timezone = Timezone.new
 
       doc.elements.each("geonames/timezone") do |element|
-        timezone.timezone_id = get_element_child_text(element, 'timezoneId')
+        timezone.timezone_id = get_element_child_text(element,  'timezoneId')
         timezone.gmt_offset  = get_element_child_float(element, 'gmtOffset')
         timezone.dst_offset  = get_element_child_float(element, 'dstOffset')
       end
@@ -271,14 +271,14 @@ module Geonames
       url = "/findNearbyWikipedia?a=a"
 
       if !lat.nil? && !long.nil?
-        url = url + "&lat=" + lat.to_s
-        url = url + "&lng=" + long.to_s
-        url = url + "&radius=" + radius.to_s unless radius.nil?
-        url = url + "&max_rows=" + max_rows.to_s unless max_rows.nil?
+        url << "&lat="      + lat.to_s
+        url << "&lng="      + long.to_s
+        url << "&radius="   + radius.to_s   unless radius.nil?
+        url << "&max_rows=" + max_rows.to_s unless max_rows.nil?
       elsif !q.nil?
-        url = url + "&q=" + q
-        url = url + "&radius=" + radius.to_s unless radius.nil?
-        url = url + "&max_rows=" + max_rows.to_s unless max_rows.nil?
+        url << "&q="        + q
+        url << "&radius="   + radius.to_s   unless radius.nil?
+        url << "&max_rows=" + max_rows.to_s unless max_rows.nil?
       end
 
       res = make_request(url, args)
@@ -313,12 +313,12 @@ module Geonames
 
       url = "/wikipediaBoundingBox?a=a"
 
-      url = url + "&north=" + north.to_s
-      url = url + "&east=" + east.to_s
-      url = url + "&south=" + south.to_s
-      url = url + "&west=" + west.to_s
-      url = url + "&radius=" + radius.to_s unless radius.nil?
-      url = url + "&max_rows=" + max_rows.to_s unless max_rows.nil?
+      url << "&north="    + north.to_s
+      url << "&east="     + east.to_s
+      url << "&south="    + south.to_s
+      url << "&west="     + west.to_s
+      url << "&radius="   + radius.to_s   unless radius.nil?
+      url << "&max_rows=" + max_rows.to_s unless max_rows.nil?
 
       res = make_request(url, args)
 
@@ -339,10 +339,10 @@ module Geonames
       # Therefore 'type=xml' is added:
       url = "/countrySubdivision?a=a&type=xml"
 
-      url = url + "&lat=" + lat.to_s
-      url = url + "&lng=" + long.to_s
-      url = url + "&maxRows=" + maxRows.to_s
-      url = url + "&radius=" + radius.to_s
+      url << "&lat="     + lat.to_s
+      url << "&lng="     + long.to_s
+      url << "&maxRows=" + maxRows.to_s
+      url << "&radius="  + radius.to_s
 
       res = make_request(url, args)
 
@@ -388,10 +388,10 @@ module Geonames
 
       countries = []
 
-      url = url + "&lat=" + lat.to_s
-      url = url + "&lng=" + long.to_s
-      url = url + "&maxRows=" + maxRows.to_s
-      url = url + "&radius=" + radius.to_s
+      url << "&lat="     + lat.to_s
+      url << "&lng="     + long.to_s
+      url << "&maxRows=" + maxRows.to_s
+      url << "&radius="  + radius.to_s
 
       res = make_request(url, args)
 
@@ -409,60 +409,19 @@ module Geonames
       toponym_sr = ToponymSearchResult.new
 
       url = "/search?a=a"
-
-      if !search_criteria.q.nil?
-        url = url + "&q=" + CGI.escape(search_criteria.q)
-      end
-
-      if !search_criteria.name_equals.nil?
-        url = url + "&name_equals=" + CGI.escape(search_criteria.name_equals)
-      end
-
-      if !search_criteria.name_starts_with.nil?
-        url = url + "&name_startsWith=" + CGI.escape(search_criteria.name_starts_with)
-      end
-
-      if !search_criteria.name.nil?
-        url = url + "&name=" + CGI.escape(search_criteria.name)
-      end
-
-      if !search_criteria.tag.nil?
-        url = url + "&tag=" + CGI.escape(search_criteria.tag)
-      end
-
-      if !search_criteria.country_code.nil?
-        url = url + "&country=" + CGI.escape(search_criteria.country_code)
-      end
-
-      if !search_criteria.admin_code_1.nil?
-        url = url + "&adminCode1=" + CGI.escape(search_criteria.admin_code_1)
-      end
-
-      if !search_criteria.language.nil?
-        url = url + "&lang=" + CGI.escape(search_criteria.language)
-      end
-
-      if !search_criteria.feature_class.nil?
-        url = url + "&featureClass=" + CGI.escape(search_criteria.feature_class)
-      end
-
-      if !search_criteria.feature_codes.nil?
-        for feature_code in search_criteria.feature_codes
-          url = url + "&fcode=" + CGI.escape(feature_code)
-        end
-      end
-
-      if !search_criteria.max_rows.nil?
-        url = url + "&maxRows=" + CGI.escape(search_criteria.max_rows)
-      end
-
-      if !search_criteria.start_row.nil?
-        url = url + "&startRow=" + CGI.escape(search_criteria.start_row)
-      end
-
-      if !search_criteria.style.nil?
-        url = url + "&style=" + CGI.escape(search_criteria.style)
-      end
+      url << "&q="               + CGI.escape(search_criteria.q)                unless search_criteria.q.nil?
+      url << "&name_equals="     + CGI.escape(search_criteria.name_equals)      unless search_criteria.name_equals.nil?
+      url << "&name_startsWith=" + CGI.escape(search_criteria.name_starts_with) unless search_criteria.name_starts_with.nil?
+      url << "&name="            + CGI.escape(search_criteria.name)             unless search_criteria.name.nil?
+      url << "&tag="             + CGI.escape(search_criteria.tag)              unless search_criteria.tag.nil?
+      url << "&country="         + CGI.escape(search_criteria.country_code)     unless search_criteria.country_code.nil?
+      url << "&adminCode1="      + CGI.escape(search_criteria.admin_code_1)     unless search_criteria.admin_code_1.nil?
+      url << "&lang="            + CGI.escape(search_criteria.language)         unless search_criteria.language.nil?
+      url << "&featureClass="    + CGI.escape(search_criteria.feature_class)    unless search_criteria.feature_class.nil?
+      url << "&maxRows="         + CGI.escape(search_criteria.max_rows)         unless search_criteria.max_rows.nil?
+      url << "&startRow="        + CGI.escape(search_criteria.start_row)        unless search_criteria.start_row.nil?
+      url << "&style="           + CGI.escape(search_criteria.style)            unless search_criteria.style.nil?
+      url << search_criteria.feature_codes.map {|fcode| "&fcode=" + CGI.escape(fcode) }.join unless search_criteria.feature_codes.nil?
 
       res = make_request(url, args)
 

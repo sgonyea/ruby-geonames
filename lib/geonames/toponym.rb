@@ -21,7 +21,7 @@ module Geonames
   class Toponym
     attr_accessor :geoname_id, :name, :alternate_names, :country_code,
                   :country_name, :population, :elevation, :feature_class,
-                  :feature_class_name, :feature_code,:feature_code_name,
+                  :feature_class_name, :feature_code, :feature_code_name,
                   :latitude, :longitude, :distance,
                   :admin_code_1, :admin_code_2, :admin_name_1, :admin_name_2
   end
