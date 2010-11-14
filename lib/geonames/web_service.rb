@@ -159,7 +159,7 @@ module Geonames
 
     def WebService.postal_code_search(search_criteria, *args)
       # postal codes to reutrn
-      postal_codes = Array.new
+      postal_codes = []
 
       url = "/postalCodeSearch?a=a"
       url = url + search_criteria.to_query_params_string
@@ -177,7 +177,7 @@ module Geonames
 
     def WebService.find_nearby_postal_codes(search_criteria)
       # postal codes to reutrn
-      postal_codes = Array.new
+      postal_codes = []
 
       url = "/findNearbyPostalCodes?a=a"
       url = url + search_criteria.to_query_params_string
@@ -194,7 +194,7 @@ module Geonames
     end
 
     def WebService.find_nearby_place_name(lat, long)
-      places = Array.new
+      places = []
 
       url = "/findNearbyPlaceName?a=a"
 
@@ -269,7 +269,7 @@ module Geonames
     end
 
     def WebService.find_nearby_wikipedia(hashes)
-      articles = Array.new
+      articles = []
 
       lat        = hashes[:lat]
       long       = hashes[:long]
@@ -310,7 +310,7 @@ module Geonames
     end
 
     def WebService.find_bounding_box_wikipedia(hashes)
-      articles = Array.new
+      articles = []
 
       north      = hashes[:north]
       east       = hashes[:east]
@@ -344,7 +344,7 @@ module Geonames
     end
 
     def WebService.country_subdivision(lat, long, radius = 0, maxRows = 1)
-      country_subdivisions = Array.new
+      country_subdivisions = []
 
       # maxRows is only implemented in the xml version:
       # http://groups.google.com/group/geonames/browse_thread/thread/f7f1bb2504ed216e
@@ -383,7 +383,7 @@ module Geonames
 
       doc = REXML::Document.new res.body
 
-      countries = Array.new
+      countries = []
 
       doc.elements.each("geonames/country") do |element|
         countries << WebService.element_to_country_info(element)
@@ -398,7 +398,7 @@ module Geonames
       # Therefore 'type=xml' is added:
       url = "/countrycode?a=a&type=xml"
 
-      countries = Array.new
+      countries = []
 
       url = url + "&lat=" + lat.to_s
       url = url + "&lng=" + long.to_s

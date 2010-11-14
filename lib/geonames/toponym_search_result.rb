@@ -21,7 +21,7 @@ module Geonames
     attr_accessor :total_results_count, :toponyms
 
     def initialize
-      @toponyms = Array.new
+      @toponyms = []
     end
   end
 end
