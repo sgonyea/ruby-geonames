@@ -242,7 +242,7 @@ module Geonames
       options.update(args.last.is_a?(Hash) ? args.pop : {})
 
       uri = URI.parse(url)
-      req = Net::HTTP::Get.new(uri.path + '?' + uri.query)
+      req = Net::HTTP::Get.new("#{uri.path}?#{uri.query}", 'User-Agent' => USER_AGENT)
 
       Net::HTTP.start(uri.host, uri.port) do |http|
         http.read_timeout = options[:read_timeout]
