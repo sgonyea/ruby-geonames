@@ -45,16 +45,16 @@ module Geonames
     def WebService.element_to_postal_code(element)
       postal_code = PostalCode.new
 
-      postal_code.admin_code_1 = WebService::get_element_child_text(element,  'adminCode1')
-      postal_code.admin_code_2 = WebService::get_element_child_text(element,  'adminCode2')
-      postal_code.admin_name_1 = WebService::get_element_child_text(element,  'adminName1')
-      postal_code.admin_name_2 = WebService::get_element_child_text(element,  'adminName2')
-      postal_code.country_code = WebService::get_element_child_text(element,  'countryCode')
-      postal_code.distance     = WebService::get_element_child_float(element, 'distance')
-      postal_code.longitude    = WebService::get_element_child_float(element, 'lng')
-      postal_code.latitude     = WebService::get_element_child_float(element, 'lat')
-      postal_code.place_name   = WebService::get_element_child_text(element,  'name')
-      postal_code.postal_code  = WebService::get_element_child_text(element,  'postalcode')
+      postal_code.admin_code_1 = WebService.get_element_child_text(element,  'adminCode1')
+      postal_code.admin_code_2 = WebService.get_element_child_text(element,  'adminCode2')
+      postal_code.admin_name_1 = WebService.get_element_child_text(element,  'adminName1')
+      postal_code.admin_name_2 = WebService.get_element_child_text(element,  'adminName2')
+      postal_code.country_code = WebService.get_element_child_text(element,  'countryCode')
+      postal_code.distance     = WebService.get_element_child_float(element, 'distance')
+      postal_code.longitude    = WebService.get_element_child_float(element, 'lng')
+      postal_code.latitude     = WebService.get_element_child_float(element, 'lat')
+      postal_code.place_name   = WebService.get_element_child_text(element,  'name')
+      postal_code.postal_code  = WebService.get_element_child_text(element,  'postalcode')
 
       return postal_code
     end
@@ -62,17 +62,17 @@ module Geonames
     def WebService.element_to_wikipedia_article(element)
       article = WikipediaArticle.new
 
-      article.language      = WebService::get_element_child_text(element,  'lang')
-      article.title         = WebService::get_element_child_text(element,  'title')
-      article.summary       = WebService::get_element_child_text(element,  'summary')
-      article.wikipedia_url = WebService::get_element_child_text(element,  'wikipediaUrl')
-      article.feature       = WebService::get_element_child_text(element,  'feature')
-      article.population    = WebService::get_element_child_text(element,  'population')
-      article.elevation     = WebService::get_element_child_text(element,  'elevation')
-      article.latitude      = WebService::get_element_child_float(element, 'lat')
-      article.longitude     = WebService::get_element_child_float(element, 'lng')
-      article.thumbnail_img = WebService::get_element_child_text(element,  'thumbnailImg')
-      article.distance      = WebService::get_element_child_float(element, 'distance')
+      article.language      = WebService.get_element_child_text(element,  'lang')
+      article.title         = WebService.get_element_child_text(element,  'title')
+      article.summary       = WebService.get_element_child_text(element,  'summary')
+      article.wikipedia_url = WebService.get_element_child_text(element,  'wikipediaUrl')
+      article.feature       = WebService.get_element_child_text(element,  'feature')
+      article.population    = WebService.get_element_child_text(element,  'population')
+      article.elevation     = WebService.get_element_child_text(element,  'elevation')
+      article.latitude      = WebService.get_element_child_float(element, 'lat')
+      article.longitude     = WebService.get_element_child_float(element, 'lng')
+      article.thumbnail_img = WebService.get_element_child_text(element,  'thumbnailImg')
+      article.distance      = WebService.get_element_child_float(element, 'distance')
 
       return article
     end
@@ -80,24 +80,24 @@ module Geonames
     def WebService.element_to_toponym(element)
       toponym = Toponym.new
 
-      toponym.name               = WebService::get_element_child_text(element,  'name')
-      toponym.alternate_names    = WebService::get_element_child_text(element,  'alternateNames')
-      toponym.latitude           = WebService::get_element_child_float(element, 'lat')
-      toponym.longitude          = WebService::get_element_child_float(element, 'lng')
-      toponym.geoname_id         = WebService::get_element_child_text(element,  'geonameId')
-      toponym.country_code       = WebService::get_element_child_text(element,  'countryCode')
-      toponym.country_name       = WebService::get_element_child_text(element,  'countryName')
-      toponym.feature_class      = WebService::get_element_child_text(element,  'fcl')
-      toponym.feature_code       = WebService::get_element_child_text(element,  'fcode')
-      toponym.feature_class_name = WebService::get_element_child_text(element,  'fclName')
-      toponym.feature_code_name  = WebService::get_element_child_text(element,  'fcodeName')
-      toponym.population         = WebService::get_element_child_int(element,   'population')
-      toponym.elevation          = WebService::get_element_child_text(element,  'elevation')
-      toponym.distance           = WebService::get_element_child_float(element, 'distance')
-      toponym.admin_code_1       = WebService::get_element_child_text(element,  'adminCode1')
-      toponym.admin_code_2       = WebService::get_element_child_text(element,  'adminCode2')
-      toponym.admin_name_1       = WebService::get_element_child_text(element,  'adminName1')
-      toponym.admin_name_2       = WebService::get_element_child_text(element,  'adminName2')
+      toponym.name               = WebService.get_element_child_text(element,  'name')
+      toponym.alternate_names    = WebService.get_element_child_text(element,  'alternateNames')
+      toponym.latitude           = WebService.get_element_child_float(element, 'lat')
+      toponym.longitude          = WebService.get_element_child_float(element, 'lng')
+      toponym.geoname_id         = WebService.get_element_child_text(element,  'geonameId')
+      toponym.country_code       = WebService.get_element_child_text(element,  'countryCode')
+      toponym.country_name       = WebService.get_element_child_text(element,  'countryName')
+      toponym.feature_class      = WebService.get_element_child_text(element,  'fcl')
+      toponym.feature_code       = WebService.get_element_child_text(element,  'fcode')
+      toponym.feature_class_name = WebService.get_element_child_text(element,  'fclName')
+      toponym.feature_code_name  = WebService.get_element_child_text(element,  'fcodeName')
+      toponym.population         = WebService.get_element_child_int(element,   'population')
+      toponym.elevation          = WebService.get_element_child_text(element,  'elevation')
+      toponym.distance           = WebService.get_element_child_float(element, 'distance')
+      toponym.admin_code_1       = WebService.get_element_child_text(element,  'adminCode1')
+      toponym.admin_code_2       = WebService.get_element_child_text(element,  'adminCode2')
+      toponym.admin_name_1       = WebService.get_element_child_text(element,  'adminName1')
+      toponym.admin_name_2       = WebService.get_element_child_text(element,  'adminName2')
 
       return toponym
     end
@@ -105,19 +105,19 @@ module Geonames
     def WebService.element_to_intersection(element)
       intersection = Intersection.new
 
-      intersection.street_1     = WebService::get_element_child_text(element,  'street1')
-      intersection.street_2     = WebService::get_element_child_text(element,  'street2')
-      intersection.admin_code_1 = WebService::get_element_child_text(element,  'adminCode1')
-      intersection.admin_code_1 = WebService::get_element_child_text(element,  'adminCode1')
-      intersection.admin_code_2 = WebService::get_element_child_text(element,  'adminCode2')
-      intersection.admin_name_1 = WebService::get_element_child_text(element,  'adminName1')
-      intersection.admin_name_2 = WebService::get_element_child_text(element,  'adminName2')
-      intersection.country_code = WebService::get_element_child_text(element,  'countryCode')
-      intersection.distance     = WebService::get_element_child_float(element, 'distance')
-      intersection.longitude    = WebService::get_element_child_float(element, 'lat')
-      intersection.latitude     = WebService::get_element_child_float(element, 'lng')
-      intersection.place_name   = WebService::get_element_child_text(element,  'name')
-      intersection.postal_code  = WebService::get_element_child_text(element,  'postalcode')
+      intersection.street_1     = WebService.get_element_child_text(element,  'street1')
+      intersection.street_2     = WebService.get_element_child_text(element,  'street2')
+      intersection.admin_code_1 = WebService.get_element_child_text(element,  'adminCode1')
+      intersection.admin_code_1 = WebService.get_element_child_text(element,  'adminCode1')
+      intersection.admin_code_2 = WebService.get_element_child_text(element,  'adminCode2')
+      intersection.admin_name_1 = WebService.get_element_child_text(element,  'adminName1')
+      intersection.admin_name_2 = WebService.get_element_child_text(element,  'adminName2')
+      intersection.country_code = WebService.get_element_child_text(element,  'countryCode')
+      intersection.distance     = WebService.get_element_child_float(element, 'distance')
+      intersection.longitude    = WebService.get_element_child_float(element, 'lat')
+      intersection.latitude     = WebService.get_element_child_float(element, 'lng')
+      intersection.place_name   = WebService.get_element_child_text(element,  'name')
+      intersection.postal_code  = WebService.get_element_child_text(element,  'postalcode')
 
       return intersection
     end
@@ -169,7 +169,7 @@ module Geonames
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/code") do |element|
-        postal_codes << WebService::element_to_postal_code(element)
+        postal_codes << WebService.element_to_postal_code(element)
       end
 
       postal_codes
@@ -187,7 +187,7 @@ module Geonames
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/code") do |element|
-        postal_codes << WebService::element_to_postal_code(element)
+        postal_codes << WebService.element_to_postal_code(element)
       end
 
       postal_codes
@@ -206,7 +206,7 @@ module Geonames
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/geoname") do |element|
-        places << WebService::element_to_toponym(element)
+        places << WebService.element_to_toponym(element)
       end
 
       return places
@@ -225,7 +225,7 @@ module Geonames
       intersection = []
 
       doc.elements.each("geonames/intersection") do |element|
-        intersection = WebService::element_to_intersection(element)
+        intersection = WebService.element_to_intersection(element)
       end
 
       return intersection
@@ -237,9 +237,9 @@ module Geonames
       timezone = Timezone.new
 
       doc.elements.each("geonames/timezone") do |element|
-        timezone.timezone_id = WebService::get_element_child_text(element, 'timezoneId')
-        timezone.gmt_offset  = WebService::get_element_child_float(element, 'gmtOffset')
-        timezone.dst_offset  = WebService::get_element_child_float(element, 'dstOffset')
+        timezone.timezone_id = WebService.get_element_child_text(element, 'timezoneId')
+        timezone.gmt_offset  = WebService.get_element_child_float(element, 'gmtOffset')
+        timezone.dst_offset  = WebService.get_element_child_float(element, 'dstOffset')
       end
 
       timezone
@@ -251,7 +251,7 @@ module Geonames
       url += "&lang=#{Geonames.lang}"
 
       options = { :open_timeout => 60, :read_timeout => 60 }
-      options.update(args.last.is_a?(::Hash) ? args.pop : {})
+      options.update(args.last.is_a?(Hash) ? args.pop : {})
 
       uri = URI.parse(url)
       req = Net::HTTP::Get.new(uri.path + '?' + uri.query)
@@ -298,7 +298,7 @@ module Geonames
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/entry") do |element|
-        articles << WebService::element_to_wikipedia_article(element)
+        articles << WebService.element_to_wikipedia_article(element)
       end
 
       return articles
@@ -337,7 +337,7 @@ module Geonames
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/entry") do |element|
-        articles << WebService::element_to_wikipedia_article(element)
+        articles << WebService.element_to_wikipedia_article(element)
       end
 
       return articles
@@ -363,12 +363,12 @@ module Geonames
       doc.elements.each("geonames/countrySubdivision") do |element|
         country_subdivision = CountrySubdivision.new
 
-        country_subdivision.country_code = WebService::get_element_child_text(element, 'countryCode')
-        country_subdivision.country_name = WebService::get_element_child_text(element, 'countryName')
-        country_subdivision.admin_code_1 = WebService::get_element_child_text(element, 'adminCode1')
-        country_subdivision.admin_name_1 = WebService::get_element_child_text(element, 'adminName1')
-        country_subdivision.code_fips    = WebService::get_element_child_text(element, 'code[@type="FIPS10-4"]')
-        country_subdivision.code_iso     = WebService::get_element_child_text(element, 'code[@type="ISO3166-2"]')
+        country_subdivision.country_code = WebService.get_element_child_text(element, 'countryCode')
+        country_subdivision.country_name = WebService.get_element_child_text(element, 'countryName')
+        country_subdivision.admin_code_1 = WebService.get_element_child_text(element, 'adminCode1')
+        country_subdivision.admin_name_1 = WebService.get_element_child_text(element, 'adminName1')
+        country_subdivision.code_fips    = WebService.get_element_child_text(element, 'code[@type="FIPS10-4"]')
+        country_subdivision.code_iso     = WebService.get_element_child_text(element, 'code[@type="ISO3166-2"]')
 
         country_subdivisions << country_subdivision
       end
@@ -386,7 +386,7 @@ module Geonames
       countries = Array.new
 
       doc.elements.each("geonames/country") do |element|
-        countries << WebService::element_to_country_info(element)
+        countries << WebService.element_to_country_info(element)
       end
 
       countries.size > 1 ? countries : countries[0]
@@ -410,7 +410,7 @@ module Geonames
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/country") do |element|
-        countries << WebService::element_to_toponym(element)
+        countries << WebService.element_to_toponym(element)
       end
 
       return countries
@@ -423,57 +423,57 @@ module Geonames
       url = "/search?a=a"
 
       if !search_criteria.q.nil?
-        url = url + "&q=" + CGI::escape(search_criteria.q)
+        url = url + "&q=" + CGI.escape(search_criteria.q)
       end
 
       if !search_criteria.name_equals.nil?
-        url = url + "&name_equals=" + CGI::escape(search_criteria.name_equals)
+        url = url + "&name_equals=" + CGI.escape(search_criteria.name_equals)
       end
 
       if !search_criteria.name_starts_with.nil?
-        url = url + "&name_startsWith=" + CGI::escape(search_criteria.name_starts_with)
+        url = url + "&name_startsWith=" + CGI.escape(search_criteria.name_starts_with)
       end
 
       if !search_criteria.name.nil?
-        url = url + "&name=" + CGI::escape(search_criteria.name)
+        url = url + "&name=" + CGI.escape(search_criteria.name)
       end
 
       if !search_criteria.tag.nil?
-        url = url + "&tag=" + CGI::escape(search_criteria.tag)
+        url = url + "&tag=" + CGI.escape(search_criteria.tag)
       end
 
       if !search_criteria.country_code.nil?
-        url = url + "&country=" + CGI::escape(search_criteria.country_code)
+        url = url + "&country=" + CGI.escape(search_criteria.country_code)
       end
 
       if !search_criteria.admin_code_1.nil?
-        url = url + "&adminCode1=" + CGI::escape(search_criteria.admin_code_1)
+        url = url + "&adminCode1=" + CGI.escape(search_criteria.admin_code_1)
       end
 
       if !search_criteria.language.nil?
-        url = url + "&lang=" + CGI::escape(search_criteria.language)
+        url = url + "&lang=" + CGI.escape(search_criteria.language)
       end
 
       if !search_criteria.feature_class.nil?
-        url = url + "&featureClass=" + CGI::escape(search_criteria.feature_class)
+        url = url + "&featureClass=" + CGI.escape(search_criteria.feature_class)
       end
 
       if !search_criteria.feature_codes.nil?
         for feature_code in search_criteria.feature_codes
-          url = url + "&fcode=" + CGI::escape(feature_code)
+          url = url + "&fcode=" + CGI.escape(feature_code)
         end
       end
 
       if !search_criteria.max_rows.nil?
-        url = url + "&maxRows=" + CGI::escape(search_criteria.max_rows)
+        url = url + "&maxRows=" + CGI.escape(search_criteria.max_rows)
       end
 
       if !search_criteria.start_row.nil?
-        url = url + "&startRow=" + CGI::escape(search_criteria.start_row)
+        url = url + "&startRow=" + CGI.escape(search_criteria.start_row)
       end
 
       if !search_criteria.style.nil?
-        url = url + "&style=" + CGI::escape(search_criteria.style)
+        url = url + "&style=" + CGI.escape(search_criteria.style)
       end
 
       res = make_request(url)
@@ -483,7 +483,7 @@ module Geonames
       toponym_sr.total_results_count = doc.elements["geonames/totalResultsCount"].text
 
       doc.elements.each("geonames/geoname") do |element|
-        toponym_sr.toponyms << WebService::element_to_toponym(element)
+        toponym_sr.toponyms << WebService.element_to_toponym(element)
       end
 
       return toponym_sr
