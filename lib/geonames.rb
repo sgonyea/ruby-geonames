@@ -27,9 +27,11 @@ require 'toponym_search_criteria'
 require 'postal_code'
 require 'postal_code_search_criteria'
 require 'timezone'
+require 'country_info'
 require 'country_subdivision'
 require 'wikipedia_article'
 require 'intersection'
+require 'bounding_box'
 
 module Geonames
   autoload :Config,  'geonames/config'

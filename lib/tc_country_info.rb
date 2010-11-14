@@ -10,11 +10,11 @@ class TestCountryInfo < Test::Unit::TestCase
     @expected = 
       {:country_code => 'TH', :country_name => 'Thailand', :iso_numeric => 764,
         :iso_alpha_3 => 'THA', :fips_code => 'TH', :continent => 'AS', 
-        :capital => 'Bangkok', :area_sq_km => 514000.0, :population => 65493000,
+        :capital => 'Bangkok', :area_sq_km => 514000.0, :population => 67089500,
         :currency_code => 'THB', :geonameId => 1605651, 
         :languages => ['th', 'en'],
-        :box_north => 20.4631977081299, :box_south => 5.60999917984009, 
-        :box_east => 105.63939666748, :box_west => 97.3456268310547}
+        :box_north => 20.463194, :box_south => 5.61,
+        :box_east => 105.639389, :box_west => 97.345642}
   end
   
   def teardown
