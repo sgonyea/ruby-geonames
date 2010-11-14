@@ -18,15 +18,8 @@
 
 module Geonames
   class CountrySubdivision
-    attr :country_code
-    attr :country_name
-    attr :admin_code_1
-    attr :admin_name_1
-    attr :code_fips
-    attr :code_iso
-
-    attr_writer :country_code, :country_name
-    attr_writer :admin_name_1, :admin_code_1
-    attr_writer :code_fips, :code_iso
+    attr_accessor :country_code, :country_name,
+                  :admin_name_1, :admin_code_1,
+                  :code_fips, :code_iso
   end
 end

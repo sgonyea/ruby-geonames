@@ -18,23 +18,9 @@
 
 module Geonames
   class ToponymSearchCriteria
-    attr :q
-    attr :country_code
-    attr :name
-    attr :name_equals
-    attr :name_starts_with
-    attr :tag
-    attr :language
-    attr :style
-    attr :feature_class
-    attr :feature_codes
-    attr :admin_code_1
-    attr :max_rows
-    attr :start_row
-
-    attr_writer :q, :country_code, :name, :name_equals
-    attr_writer :name_starts_with, :tag, :language, :style
-    attr_writer :feature_class, :feature_codes, :admin_code_1
-    attr_writer :max_rows, :start_row
+    attr_accessor :q, :country_code, :name, :name_equals,
+                  :name_starts_with, :tag, :language, :style,
+                  :feature_class, :feature_codes, :admin_code_1,
+                  :max_rows, :start_row
   end
 end

@@ -18,20 +18,9 @@
 
 module Geonames
   class PostalCode
-    attr :postal_code
-    attr :place_name
-    attr :country_code
-    attr :latitude
-    attr :longitude
-    attr :admin_name_1
-    attr :admin_code_1
-    attr :admin_name_2
-    attr :admin_code_2
-    attr :distance
-
-    attr_writer :postal_code, :place_name, :country_code
-    attr_writer :latitude, :longitude, :admin_name_1
-    attr_writer :admin_code_1, :admin_name_2, :admin_code_2
-    attr_writer :distance
+    attr_accessor :postal_code, :place_name, :country_code,
+                  :latitude, :longitude, :admin_name_1,
+                  :admin_code_1, :admin_name_2, :admin_code_2,
+                  :distance
   end
 end

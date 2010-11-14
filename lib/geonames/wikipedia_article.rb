@@ -18,21 +18,9 @@
 
 module Geonames
   class WikipediaArticle
-    attr :language
-    attr :title
-    attr :summary
-    attr :wikipedia_url
-    attr :feature
-    attr :population
-    attr :elevation
-    attr :latitude
-    attr :longitude
-    attr :thumbnail_img
-    attr :distance
-
-    attr_writer :language, :title, :summary
-    attr_writer :wikipedia_url, :feature, :population
-    attr_writer :elevation, :latitude, :longitude
-    attr_writer :thumbnail_img, :distance
+    attr_accessor :language, :title, :summary,
+                  :wikipedia_url, :feature, :population,
+                  :elevation, :latitude, :longitude,
+                  :thumbnail_img, :distance
   end
 end

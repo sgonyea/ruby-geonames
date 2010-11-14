@@ -22,28 +22,18 @@ module Geonames
     @@default_lang     = "en"
     @@default_username = nil
 
+    attr_writer :base_url, :lang, :username
+
     def base_url
       @base_url || @@default_base_url
-    end
-
-    def base_url=(base_url)
-      @base_url = base_url
     end
 
     def lang
       @lang || @@default_lang
     end
 
-    def lang=(lang)
-      @lang = lang
-    end
-
     def username
       @username || @@default_username
-    end
-
-    def username=(username)
-      @username = username
     end
   end
 end

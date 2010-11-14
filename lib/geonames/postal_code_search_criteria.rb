@@ -21,19 +21,9 @@ require 'cgi'
 
 module Geonames
   class PostalCodeSearchCriteria
-    attr :postal_code
-    attr :place_name
-    attr :country_code
-    attr :latitude
-    attr :longitude
-    attr :style
-    attr :max_rows
-    attr :is_or_operator
-    attr :radius
-
-    attr_writer :postal_code, :place_name, :country_code
-    attr_writer :latitude, :longitude, :style
-    attr_writer :max_rows,  :is_or_operator, :radius
+    attr_accessor :postal_code, :place_name, :country_code,
+                  :latitude, :longitude, :style,
+                  :max_rows,  :is_or_operator, :radius
 
     def initialize
       @is_or_operator = false

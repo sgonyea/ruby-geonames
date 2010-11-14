@@ -18,10 +18,7 @@
 
 module Geonames
   class ToponymSearchResult
-    attr :total_results_count
-    attr :toponyms
-
-    attr_writer :total_results_count, :toponyms
+    attr_accessor :total_results_count, :toponyms
 
     def initialize
       @toponyms = Array.new
