@@ -9,10 +9,5 @@ module Geonames
       self.east_point = east
       self.west_point = west
     end
-    
-    def contains?(point)
-      #todo implement me
-      return false
-    end
   end
 end
