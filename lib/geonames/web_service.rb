@@ -28,21 +28,15 @@ module Geonames
     module_function
 
     def get_element_child_text(element, child)
-      if !element.elements[child].nil?
-        element.elements[child][0].to_s
-      end
+      element.elements[child][0].to_s unless element.elements[child].nil?
     end
 
     def get_element_child_float(element, child)
-      if !element.elements[child].nil?
-        element.elements[child][0].to_s.to_f
-      end
+      element.elements[child][0].to_s.to_f unless element.elements[child].nil?
     end
 
     def get_element_child_int(element, child)
-      if !element.elements[child].nil?
-        element.elements[child][0].to_s.to_i
-      end
+      element.elements[child][0].to_s.to_i unless element.elements[child].nil?
     end
 
     def element_to_postal_code(element)
