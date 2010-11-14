@@ -31,43 +31,15 @@ module Geonames
 
     def to_query_params_string
       url = ''
-
-      if !@postal_code.nil?
-        url = url + "&postalcode=" + CGI.escape(@postal_code)
-      end
-
-      if !@place_name.nil?
-        url = url + "&placename=" + CGI.escape(@place_name)
-      end
-
-      if !@latitude.nil?
-        url = url + "&lat=" + CGI.escape(@latitude.to_s)
-      end
-
-      if !@longitude.nil?
-        url = url + "&lng=" + CGI.escape(@longitude.to_s)
-      end
-
-      if !@style.nil?
-        url = url + "&style=" + CGI.escape(@style)
-      end
-
-      if !@country_code.nil?
-        url = url + "&country=" + CGI.escape(@country_code)
-      end
-
-      if !@max_rows.nil?
-        url = url + "&maxRows=" + CGI.escape(@max_rows.to_s)
-      end
-
-      if !@radius.nil?
-        url = url + "&radius=" + CGI.escape(@radius.to_s)
-      end
-
-      if @is_or_operator
-        url = url + "&operator=OR"
-      end
-
+      url << "&postalcode=" + CGI.escape(@postal_code)    unless @postal_code.nil?
+      url << "&placename="  + CGI.escape(@place_name)     unless @place_name.nil?
+      url << "&lat="        + CGI.escape(@latitude.to_s)  unless @latitude.nil?
+      url << "&lng="        + CGI.escape(@longitude.to_s) unless @longitude.nil?
+      url << "&style="      + CGI.escape(@style)          unless @style.nil?
+      url << "&country="    + CGI.escape(@country_code)   unless @country_code.nil?
+      url << "&maxRows="    + CGI.escape(@max_rows.to_s)  unless @max_rows.nil?
+      url << "&radius="     + CGI.escape(@radius.to_s)    unless @radius.nil?
+      url << "&operator=OR" if @is_or_operator
       url
     end
   end
