@@ -152,7 +152,7 @@ module Geonames
       url = "/postalCodeSearch?a=a"
       url = url + search_criteria.to_query_params_string
 
-      res = make_request(url,args)
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
@@ -163,14 +163,14 @@ module Geonames
       postal_codes
     end
 
-    def find_nearby_postal_codes(search_criteria)
+    def find_nearby_postal_codes(search_criteria, *args)
       # postal codes to reutrn
       postal_codes = []
 
       url = "/findNearbyPostalCodes?a=a"
       url = url + search_criteria.to_query_params_string
 
-      res = make_request(url)
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
@@ -181,7 +181,7 @@ module Geonames
       postal_codes
     end
 
-    def find_nearby_place_name(lat, long)
+    def find_nearby_place_name(lat, long, *args)
       places = []
 
       url = "/findNearbyPlaceName?a=a"
@@ -189,7 +189,7 @@ module Geonames
       url = url + "&lat=" + lat.to_s
       url = url + "&lng=" + long.to_s
 
-      res = make_request(url)
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
@@ -200,13 +200,13 @@ module Geonames
       places
     end
 
-    def find_nearest_intersection(lat, long)
+    def find_nearest_intersection(lat, long, *args)
       url = "/findNearestIntersection?a=a"
 
       url = url + "&lat=" + lat.to_s
       url = url + "&lng=" + long.to_s
 
-      res = make_request(url)
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
@@ -244,11 +244,11 @@ module Geonames
       uri = URI.parse(url)
       req = Net::HTTP::Get.new(uri.path + '?' + uri.query)
 
-      Net::HTTP.start(uri.host, uri.port) { |http|
+      Net::HTTP.start(uri.host, uri.port) do |http|
         http.read_timeout = options[:read_timeout]
         http.open_timeout = options[:open_timeout]
         http.request(req)
-      }
+      end
     end
 
     def findNearbyWikipedia(hashes)
@@ -256,7 +256,7 @@ module Geonames
       find_nearby_wikipedia(hashes)
     end
 
-    def find_nearby_wikipedia(hashes)
+    def find_nearby_wikipedia(hashes, *args)
       articles = []
 
       lat        = hashes[:lat]
@@ -281,7 +281,7 @@ module Geonames
         url = url + "&max_rows=" + max_rows.to_s unless max_rows.nil?
       end
 
-      res = make_request(url)
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
@@ -297,7 +297,7 @@ module Geonames
       find_bounding_box_wikipedia(hashes)
     end
 
-    def find_bounding_box_wikipedia(hashes)
+    def find_bounding_box_wikipedia(hashes, *args)
       articles = []
 
       north      = hashes[:north]
@@ -320,7 +320,7 @@ module Geonames
       url = url + "&radius=" + radius.to_s unless radius.nil?
       url = url + "&max_rows=" + max_rows.to_s unless max_rows.nil?
 
-      res = make_request(url)
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
@@ -331,7 +331,7 @@ module Geonames
       articles
     end
 
-    def country_subdivision(lat, long, radius = 0, maxRows = 1)
+    def country_subdivision(lat, long, radius=0, maxRows=1, *args)
       country_subdivisions = []
 
       # maxRows is only implemented in the xml version:
@@ -344,7 +344,7 @@ module Geonames
       url = url + "&maxRows=" + maxRows.to_s
       url = url + "&radius=" + radius.to_s
 
-      res = make_request(url)
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
@@ -364,10 +364,10 @@ module Geonames
       country_subdivisions
     end
 
-    def country_info(country_code = false)
+    def country_info(country_code=nil, *args)
       url = "/countryInfo?a=a"
-      url += "&country=#{country_code.to_s}" if country_code
-      res = make_request(url)
+      url += "&country=#{country_code.to_s}" unless country_code.nil?
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
@@ -380,7 +380,7 @@ module Geonames
       countries.size > 1 ? countries : countries[0]
     end
 
-    def country_code(lat, long, radius = 0, maxRows = 1)
+    def country_code(lat, long, radius=0, maxRows=1, *args)
       # maxRows is only implemented in the xml version:
       # http://groups.google.com/group/geonames/browse_thread/thread/f7f1bb2504ed216e
       # Therefore 'type=xml' is added:
@@ -393,7 +393,7 @@ module Geonames
       url = url + "&maxRows=" + maxRows.to_s
       url = url + "&radius=" + radius.to_s
 
-      res = make_request(url)
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
@@ -404,7 +404,7 @@ module Geonames
       countries
     end
 
-    def search(search_criteria)
+    def search(search_criteria, *args)
       #toponym search results to return
       toponym_sr = ToponymSearchResult.new
 
@@ -464,7 +464,7 @@ module Geonames
         url = url + "&style=" + CGI.escape(search_criteria.style)
       end
 
-      res = make_request(url)
+      res = make_request(url, args)
 
       doc = REXML::Document.new res.body
 
