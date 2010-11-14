@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2010 18:07:24 GMT
+Server: Apache/2.2.13 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames>
+<country>
+<countryCode>CA</countryCode>
+<countryName>Canada</countryName>
+<distance>0.0</distance>
+</country>
+</geonames>

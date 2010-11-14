@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2010 18:03:56 GMT
+Server: Apache/2.2.13 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames>
+<timezone>
+<countryCode>CA</countryCode>
+<countryName>Canada</countryName>
+<lat>43.900120387</lat>
+<lng>-78.882869834</lng>
+<timezoneId>America/Toronto</timezoneId>
+<dstOffset>-4.0</dstOffset>
+<gmtOffset>-5.0</gmtOffset>
+<rawOffset>-5.0</rawOffset>
+<time>2010-11-13 13:03</time>
+<sunrise>2010-11-13 07:07</sunrise>
+<sunset>2010-11-13 16:51</sunset>
+</timezone>
+</geonames>

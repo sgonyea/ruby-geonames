@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2010 18:02:45 GMT
+Server: Apache/2.2.13 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Content-Type: text/xml;charset=UTF-8
+Transfer-Encoding: chunked
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames>
+<geoname>
+<toponymName>Oshawa</toponymName>
+<name>Oshawa</name>
+<lat>43.90012</lat>
+<lng>-78.84957</lng>
+<geonameId>6094578</geonameId>
+<countryCode>CA</countryCode>
+<countryName>Canada</countryName>
+<fcl>P</fcl>
+<fcode>PPL</fcode>
+<distance>2.66799</distance>
+</geoname>
+</geonames>

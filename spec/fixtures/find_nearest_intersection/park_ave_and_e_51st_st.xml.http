@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Date: Sat, 13 Nov 2010 17:48:50 GMT
+Server: Apache/2.2.13 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames>
+<intersection>
+<street1>Park Ave</street1>
+<street2>E 51 St</street2>
+<lat>40.757808</lat>
+<lng>-73.973524</lng>
+<distance>0.04</distance>
+<postalcode>10022</postalcode>
+<placename>New York</placename>
+<adminName2>New York</adminName2>
+<adminCode1>NY</adminCode1>
+<adminName1>New York</adminName1>
+<countryCode>US</countryCode>
+</intersection>
+</geonames>

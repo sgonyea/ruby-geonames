@@ -1,0 +1,81 @@
+HTTP/1.1 200 OK
+Date: Sun, 14 Nov 2010 15:57:39 GMT
+Server: Apache/2.2.13 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames>
+<entry>
+<lang>en</lang>
+<title>General Motors Centre</title>
+<summary>The General Motors Centre (GMC) is a 5,500-seat multi-purpose arena located in downtown Oshawa, Ontario at 99 Athol St. E. General Motors Canada was announced as the winner of the naming rights to the arena on October 5th, 2006. The Centre is owned by the City of Oshawa, operated in conjunction with Maple Leafs Sports and Entertainment (...)</summary>
+<feature>sport</feature>
+<countryCode>CA</countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43.8972</lat>
+<lng>-78.8597</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/General_Motors_Centre</wikipediaUrl>
+<thumbnailImg/>
+<distance>1.8824</distance>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Oshawa Airport</title>
+<summary>Oshawa Airport, , is a municipal airport adjacent to the north end of the city of Oshawa, Ontario, Canada. Oshawa Airport is one of the major general aviation airports in the Greater Toronto Area It includes two paved runways and instrument approaches. Oshawa hosts the annual Canadian Aviation Expo, Canada's largest annual aviation event (...)</summary>
+<feature>airport</feature>
+<countryCode>  </countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43.9228</lat>
+<lng>-78.895</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Oshawa_Airport</wikipediaUrl>
+<thumbnailImg/>
+<distance>2.7002</distance>
+</entry>
+<entry>
+<lang>en</lang>
+<title>List of heliports in Canada</title>
+<summary>This is an alphabetical list of heliports in Canada. They are listed in the format: * Airport name as listed in the Canada Flight Supplement (CFS), ICAO code, community served and province, elevation and coordinates. It should be noted that the airport name in the CFS may be different to the name that the airport authority uses.  (...)</summary>
+<feature>airport</feature>
+<countryCode>  </countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43.8333</lat>
+<lng>-79.0167</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/List_of_heliports_in_Canada</wikipediaUrl>
+<thumbnailImg/>
+<distance>13.0454</distance>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Ajax, Ontario</title>
+<summary>Ajax (2006 population 90,167) is a medium-sized town located in the Golden Horseshoe of south central Ontario, Canada. Ajax is a part of the Greater Toronto Area and the Regional Municipality of Durham. It is approximately east of Toronto on the shores of Lake Ontario and is bordered by the City of Pickering to the west and the Town of Whitby to the east.  (...)</summary>
+<feature>city</feature>
+<countryCode>CA</countryCode>
+<population>82000</population>
+<elevation>0</elevation>
+<lat>43.8442</lat>
+<lng>-79.0275</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Ajax%2C_Ontario</wikipediaUrl>
+<thumbnailImg/>
+<distance>13.1568</distance>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Myrtle Station, Ontario</title>
+<summary>Myrtle Station, Ontario is a community in the Town of Whitby, Durham Region, Ontario, Canada. Myrtle Station is located approximately one kilometre north of the community of Myrtle. In 1884, the Canadian Pacific Railway (CPR) built a rail line between Toronto and Montreal through the area (...)</summary>
+<feature>city</feature>
+<countryCode>CA</countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>44.0167</lat>
+<lng>-78.9667</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Myrtle_Station%2C_Ontario</wikipediaUrl>
+<thumbnailImg/>
+<distance>14.5915</distance>
+</entry>
+</geonames>

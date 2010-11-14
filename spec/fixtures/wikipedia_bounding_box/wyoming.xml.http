@@ -1,0 +1,154 @@
+HTTP/1.1 200 OK
+Date: Sun, 14 Nov 2010 04:46:36 GMT
+Server: Apache/2.2.13 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames>
+<entry>
+<lang>en</lang>
+<title>Wyoming</title>
+<summary>The State of Wyoming  is a state in the western region of the United States of America. The majority of the state is dominated by the mountain ranges and rangelands of the Rocky Mountain West, while the easternmost section of the state is a high altitude prairie region known as the High Plains. The tenth largest U.S. state by size, Wyoming is the least populous, with a U.S (...)</summary>
+<feature>state</feature>
+<countryCode>US</countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>-107.5</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Wyoming</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>USS Orlando (PF-99)</title>
+<summary>USS ''Orlando'' (PF-99), a ''Tacoma''-class frigate, was the only ship of the United States Navy to be named for Orlando, Florida. She was authorized with the hull classification symbol PG-207 but reclassified PF-99 in April 1943. Her keel was laid down 2 August 1943 under a Maritime Commission Contract by American Ship Building Company, in Cleveland, Ohio (...)</summary>
+<feature/>
+<countryCode>  </countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>165</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/USS_Orlando_%28PF-99%29</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Point Edward, Ontario</title>
+<summary>Point Edward is a village (adjacent to Sarnia, Ontario) in the Canadian province of Ontario. Point Edward sits opposite Port Huron, Michigan at the mouth of the St. Clair River. As of 2006, the population was 2,019. The population in 2001 was 2,101. (A population change of -3.9%). The area is 3.27 square kilometres. In the summer of 2003, Point Edward celebrated its 125th anniversary (...)</summary>
+<feature>city</feature>
+<countryCode>CA</countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>-82.4</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Point_Edward%2C_Ontario</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Greys River</title>
+<summary>with its confluence near Alpine in northern Lincoln County, Wyoming, USA. The river is about 65 miles (105 km.) in length, starting high up in the Wyoming Range, 40 miles south of the town of Alpine. The river eventually flows into the Snake River forming the Snake River Canyon."Greys River." ''Merriam-Webster's Geographical Dictionary'', 3rd ed. 2001 (...)</summary>
+<feature>adm2nd</feature>
+<countryCode>  </countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>-110.8</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Greys_River</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Ömnögovi Province</title>
+<summary>(provinces) of Mongolia, located in the south of the country, in the Gobi Desert. Its capital is Dalanzadgad. The province is rich in mineral deposits, including gold and copper. Ömnögovi includes several well known tourist areas, including the Flaming Cliffs, Gobi Gurvansaikhan National Park and Khongoryn Els - The Singing Sand Dunes.  (...)</summary>
+<feature/>
+<countryCode>  </countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>104.25</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/%C3%96mn%C3%B6govi_Province</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Genesee County, New York</title>
+<summary>Genesee County is a county located in Western New York, United States. As of the 2000 census, the population was 60,370.[http://quickfacts.census.gov/qfd/states/36/36037.html U.S. Census Bureau, State &amp; County QuickFacts, Genesee County, New York] Its name is from the Seneca Indian word Gen-nis'-hee-yo meaning "The Beautiful Valley (...)</summary>
+<feature>adm2nd</feature>
+<countryCode>  </countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>-78.19</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Genesee_County%2C_New_York</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Welland County, Ontario</title>
+<summary>Welland County (area, excluding cities was 226,970 acres) is a historic county in the Canadian province of Ontario. The county was formed in 1851 from Lincoln County. The county was named from the Welland River. The river got its name from John Grave Simcoe who named it after a stream in Lincolnshire, England (...)</summary>
+<feature>adm2nd</feature>
+<countryCode>CA</countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>-79.0833</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Welland_County%2C_Ontario</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Middlesex County, Ontario</title>
+<summary>Middlesex County is a census division located in Western Ontario. The administrative centre of the county is the city of London, though the city is now separated from the jurisdiction of the county. The population of the county in 2006 was 422,333, of which 70,000 live outside of the city of London but the entire county is within the London census metropolitan area (...)</summary>
+<feature>adm2nd</feature>
+<countryCode>CA</countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>-81.5</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Middlesex_County%2C_Ontario</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Otofuke, Hokkaidō</title>
+<summary>located in Katō District, Tokachi, Hokkaidō, Japan. As of 2004, the town has an estimated population of 41,935 and a density of 89.97 persons per km². The total area is 466.09 km².  (...)</summary>
+<feature>city</feature>
+<countryCode>JP</countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>143.2</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Otofuke%2C_Hokkaid%C5%8D</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Yuni, Hokkaidō</title>
+<summary>is a town located in Yūbari District, Sorachi, Hokkaidō, Japan. As of 2004, the town has an estimated population of 6,677 and a density of 49.88 persons per km². The total area is 133.86 km².  (...)</summary>
+<feature>city</feature>
+<countryCode>JP</countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>141.7833</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Yuni%2C_Hokkaid%C5%8D</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+<entry>
+<lang>en</lang>
+<title>Kushiro, Hokkaidō (town)</title>
+<summary>located in Kushiro District, Kushiro Subprefecture, Hokkaidō, Japan. As of September 30, 2004 it has an estimated population of 22,602 and an area of 252.57 km².  (...)</summary>
+<feature>city</feature>
+<countryCode>JP</countryCode>
+<population>0</population>
+<elevation>0</elevation>
+<lat>43</lat>
+<lng>144.4667</lng>
+<wikipediaUrl>http://en.wikipedia.org/wiki/Kushiro%2C_Hokkaid%C5%8D_%28town%29</wikipediaUrl>
+<thumbnailImg/>
+</entry>
+</geonames>
