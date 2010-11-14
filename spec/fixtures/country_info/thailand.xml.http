@@ -1,0 +1,29 @@
+HTTP/1.1 200 OK
+Date: Sun, 14 Nov 2010 17:02:27 GMT
+Server: Apache/2.2.13 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames>
+<country>
+<countryCode>TH</countryCode>
+<countryName>Thailand</countryName>
+<isoNumeric>764</isoNumeric>
+<isoAlpha3>THA</isoAlpha3>
+<fipsCode>TH</fipsCode>
+<continent>AS</continent>
+<capital>Bangkok</capital>
+<areaInSqKm>514000.0</areaInSqKm>
+<population>67089500</population>
+<currencyCode>THB</currencyCode>
+<languages>th,en</languages>
+<geonameId>1605651</geonameId>
+<bBoxWest>97.345642</bBoxWest>
+<bBoxNorth>20.463194</bBoxNorth>
+<bBoxEast>105.639389</bBoxEast>
+<bBoxSouth>5.61</bBoxSouth>
+</country>
+</geonames>
