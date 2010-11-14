@@ -53,7 +53,7 @@ module Geonames
       postal_code.place_name   = get_element_child_text(element,  'name')
       postal_code.postal_code  = get_element_child_text(element,  'postalcode')
 
-      return postal_code
+      postal_code
     end
 
     def element_to_wikipedia_article(element)
@@ -71,7 +71,7 @@ module Geonames
       article.thumbnail_img = get_element_child_text(element,  'thumbnailImg')
       article.distance      = get_element_child_float(element, 'distance')
 
-      return article
+      article
     end
 
     def element_to_toponym(element)
@@ -96,7 +96,7 @@ module Geonames
       toponym.admin_name_1       = get_element_child_text(element,  'adminName1')
       toponym.admin_name_2       = get_element_child_text(element,  'adminName2')
 
-      return toponym
+      toponym
     end
 
     def element_to_intersection(element)
@@ -116,7 +116,7 @@ module Geonames
       intersection.place_name   = get_element_child_text(element,  'name')
       intersection.postal_code  = get_element_child_text(element,  'postalcode')
 
-      return intersection
+      intersection
     end
 
     def element_to_country_info(element)
@@ -142,7 +142,7 @@ module Geonames
 
       country_info.set_bounding_box(north, south, east, west)
 
-      return country_info
+      country_info
     end
 
     def postal_code_search(postal_code, place_name, country_code, *args)
@@ -206,7 +206,7 @@ module Geonames
         places << element_to_toponym(element)
       end
 
-      return places
+      places
     end
 
     def find_nearest_intersection(lat, long)
@@ -225,7 +225,7 @@ module Geonames
         intersection = element_to_intersection(element)
       end
 
-      return intersection
+      intersection
     end
 
     def timezone(lat, long, *args)
@@ -298,7 +298,7 @@ module Geonames
         articles << element_to_wikipedia_article(element)
       end
 
-      return articles
+      articles
     end
 
     def findBoundingBoxWikipedia(hashes)
@@ -337,7 +337,7 @@ module Geonames
         articles << element_to_wikipedia_article(element)
       end
 
-      return articles
+      articles
     end
 
     def country_subdivision(lat, long, radius = 0, maxRows = 1)
@@ -370,7 +370,7 @@ module Geonames
         country_subdivisions << country_subdivision
       end
 
-      return country_subdivisions
+      country_subdivisions
     end
 
     def country_info(country_code = false)
@@ -410,7 +410,7 @@ module Geonames
         countries << element_to_toponym(element)
       end
 
-      return countries
+      countries
     end
 
     def search(search_criteria)
@@ -483,7 +483,7 @@ module Geonames
         toponym_sr.toponyms << element_to_toponym(element)
       end
 
-      return toponym_sr
+      toponym_sr
     end
   end
 end
