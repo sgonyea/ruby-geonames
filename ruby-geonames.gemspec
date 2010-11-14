@@ -1,17 +1,22 @@
+# -*- encoding: utf-8 -*-
+
 Gem::Specification.new do |s|
-  s.name = "ruby-geonames"
-  s.version = "0.2.7"
-  s.author = "Adam Wisniewski"
-  s.email = "adamw@tbcn.ca"
-  s.date = "2009-07-07"
-  s.homepage = "http://github.com/elecnix/ruby-geonames"
+  s.name     = "ruby-geonames"
+  s.version  = "0.2.7"
   s.platform = Gem::Platform::RUBY
-  s.summary = "Ruby library for Geonames Web Services (http://www.geonames.org/export/)"
-  s.files = ["README.markdown", "lib/timezone.rb", "lib/wikipedia_article.rb", "lib/geonames.rb", "lib/postal_code_search_criteria.rb", "lib/intersection.rb", "lib/country_subdivision.rb", "lib/toponym.rb", "lib/toponym_search_result.rb", "lib/bounding_box.rb", "lib/web_service.rb", "lib/postal_code.rb", "lib/toponym_search_criteria.rb", "lib/tc_country_info.rb", "lib/address.rb", "lib/country_info.rb", "lib/geonames/config.rb"]
-  s.require_path = "lib"
-  s.has_rdoc = true
+  s.authors  = ["Adam Wisniewski"]
+  s.email    = ["adamw@tbcn.ca"]
+  s.homepage = "http://github.com/elecnix/ruby-geonames"
+  s.summary  = %q{Ruby library for Geonames Web Services (http://www.geonames.org/export/)}
+  s.licenses = ["Apache 2.0"]
+
+  s.files            = `git ls-files`.split("\n")
+  s.test_files       = `git ls-files -- spec/**/*_spec.rb`.split("\n")
+  s.executables      = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.extra_rdoc_files = ["README.markdown"]
+
   s.required_rubygems_version = ">= 1.3.6"
+
   s.add_development_dependency "bundler", "~> 1.0.0"
   s.add_development_dependency "fakeweb", "~> 1.3.0"
   s.add_development_dependency "rake"
