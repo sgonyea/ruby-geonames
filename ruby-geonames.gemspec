@@ -1,8 +1,10 @@
 # -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+require "geonames/version"
 
 Gem::Specification.new do |s|
   s.name     = "ruby-geonames"
-  s.version  = "0.3.0"
+  s.version  = Geonames::VERSION
   s.platform = Gem::Platform::RUBY
   s.authors  = ["Adam Wisniewski"]
   s.email    = ["adamw@tbcn.ca"]

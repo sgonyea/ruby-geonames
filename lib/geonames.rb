@@ -29,11 +29,12 @@ module Geonames
   autoload :Toponym,                  'geonames/toponym'
   autoload :ToponymSearchCriteria,    'geonames/toponym_search_criteria'
   autoload :ToponymSearchResult,      'geonames/toponym_search_result'
+  autoload :Version,                  'geonames/version'
   autoload :WebService,               'geonames/web_service'
   autoload :WikipediaArticle,         'geonames/wikipedia_article'
 
   GEONAMES_SERVER = "http://ws.geonames.org"
-  USER_AGENT      = "geonames ruby webservice client 0.1"
+  USER_AGENT      = "geonames ruby webservice client #{VERSION}"
 
   class << self
     def config
