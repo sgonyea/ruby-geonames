@@ -145,15 +145,6 @@ module Geonames
       country_info
     end
 
-    def postal_code_search(postal_code, place_name, country_code, *args)
-      postal_code_sc = PostalCodeSearchCriteria.new
-      postal_code_sc.postal_code  = postal_code
-      postal_code_sc.place_name   = place_name
-      postal_code_sc.country_code = country_code
-
-      postal_code_search postal_code_sc, args
-    end
-
     def postal_code_search(search_criteria, *args)
       # postal codes to reutrn
       postal_codes = []
