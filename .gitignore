@@ -1,5 +1,5 @@
-*~
-nbproject
 .bundle
-vendor/bundle
+.rvmrc
 coverage
+Gemfile.lock
+vendor/bundle

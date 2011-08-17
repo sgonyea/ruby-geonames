@@ -22,6 +22,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "bundler", "~> 1.0.0"
   s.add_development_dependency "fakeweb", "~> 1.3.0"
   s.add_development_dependency "rake"
-  s.add_development_dependency "rcov", "~> 0.9.9"
   s.add_development_dependency "rspec", "~> 2.1.0"
 end
