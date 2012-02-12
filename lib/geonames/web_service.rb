@@ -229,6 +229,15 @@ module Geonames
       intersection
     end
 
+    def hierarchy(geonameId, *args)
+      url = "/hierarchy?geonameId=#{geonameId.to_i}"
+      res = make_request(url, args)
+      doc = REXML::Document.new res.body
+      doc.elements.collect("geonames/geoname") do |element|
+        element_to_toponym(element)
+      end
+    end
+
     def timezone(lat, long, *args)
       res = make_request("/timezone?lat=#{lat.to_s}&lng=#{long.to_s}", args)
       doc = REXML::Document.new res.body
