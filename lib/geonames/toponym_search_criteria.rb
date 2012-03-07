@@ -22,6 +22,6 @@ module Geonames
     attr_accessor :q, :country_code, :name, :name_equals,
                   :name_starts_with, :tag, :language, :style,
                   :feature_class, :feature_codes, :admin_code_1,
-                  :max_rows, :start_row
+                  :max_rows, :start_row, :is_name_required
   end
 end
