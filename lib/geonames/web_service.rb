@@ -188,8 +188,8 @@ module Geonames
 
       url << "?lat=" + lat.to_s
       url << "&lng=" + long.to_s
-      url << "&radius=" + radius.to_i unless radius.nil?
-      url << "&maxRows=" + maxRows.to_i unless maxRows.nil?
+      url << "&radius=" + radius.to_s unless radius.nil?
+      url << "&maxRows=" + maxRows.to_s unless maxRows.nil?
 
       res = make_request(url, args)
 
