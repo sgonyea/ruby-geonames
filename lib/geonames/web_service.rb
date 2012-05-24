@@ -181,15 +181,14 @@ module Geonames
       postal_codes
     end
 
-    def find_toponym(action, lat, long, radius, maxRows, args)
+    def find_toponym(action, lat, long, query_options, args)
       places = []
 
       url = "/#{action}"
 
       url << "?lat=" + lat.to_s
       url << "&lng=" + long.to_s
-      url << "&radius=" + radius.to_s unless radius.nil?
-      url << "&maxRows=" + maxRows.to_s unless maxRows.nil?
+      query_options.each { |k,v| url << "&#{k}=#{v}" }
 
       res = make_request(url, args)
 
@@ -202,12 +201,12 @@ module Geonames
       places
     end
 
-    def find_nearby_place_name(lat, long, radius=nil, maxRows=nil, *args)
-      find_toponym("findNearbyPlaceName", lat, long, radius, maxRows, args)
+    def find_nearby_place_name(lat, long, query_options = {} , *args)
+      find_toponym("findNearbyPlaceName", lat, long, query_options, args)
     end
 
-    def find_nearby(lat, long, radius=nil, maxRows=nil, *args)
-      find_toponym("findNearby", lat, long, radius, maxRows, args)
+    def find_nearby(lat, long, query_options = {}, *args)
+      find_toponym("findNearby", lat, long, query_options, args)
     end
 
     def find_nearest_intersection(lat, long, *args)
