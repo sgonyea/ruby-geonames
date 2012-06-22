@@ -246,6 +246,7 @@ module Geonames
         timezone.timezone_id = get_element_child_text(element,  'timezoneId')
         timezone.gmt_offset  = get_element_child_float(element, 'gmtOffset')
         timezone.dst_offset  = get_element_child_float(element, 'dstOffset')
+        timezone.raw_offset  = get_element_child_float(element, 'rawOffset')
       end
 
       timezone
