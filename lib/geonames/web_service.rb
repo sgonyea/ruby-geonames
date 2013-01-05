@@ -440,6 +440,7 @@ module Geonames
       url << "&maxRows="         + CGI.escape(search_criteria.max_rows)         unless search_criteria.max_rows.nil?
       url << "&startRow="        + CGI.escape(search_criteria.start_row)        unless search_criteria.start_row.nil?
       url << "&style="           + CGI.escape(search_criteria.style)            unless search_criteria.style.nil?
+      url << "&isNameRequired="  + CGI.escape(search_criteria.is_name_required) unless search_criteria.is_name_required.nil?
       url << search_criteria.feature_codes.map {|fcode| "&fcode=" + CGI.escape(fcode) }.join unless search_criteria.feature_codes.nil?
 
       res = make_request(url, args)
