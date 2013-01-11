@@ -102,6 +102,7 @@ module Geonames
       toponym.admin_code_2       = get_element_child_text(element,  'adminCode2')
       toponym.admin_name_1       = get_element_child_text(element,  'adminName1')
       toponym.admin_name_2       = get_element_child_text(element,  'adminName2')
+      toponym.timezone           = get_element_child_text(element,  'timezone')
 
       toponym
     end

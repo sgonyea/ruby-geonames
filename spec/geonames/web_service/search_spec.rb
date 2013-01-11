@@ -47,7 +47,7 @@ module Geonames
       it "return full Toponym instance" do
         subject.should be_a_kind_of Toponym
         subject.alternate_names.count.should == 105
-        ap subject.alternate_names
+        subject.timezone.should == "Europe/Vienna"
       end
     end
   end
