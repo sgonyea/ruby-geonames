@@ -22,6 +22,7 @@ require 'cgi'
 require 'geonames'
 require 'net/http'
 require 'rexml/document'
+require 'awesome_print'
 
 module Geonames
   module WebService
@@ -37,6 +38,12 @@ module Geonames
 
     def get_element_child_int(element, child)
       element.elements[child][0].to_s.to_i unless element.elements[child].nil?
+    end
+
+    def get_element_child_alternates(element, child)
+      alternates = {}
+      element.each_element_with_attribute('lang',nil,0,child) { |e| alternates[e.attribute('lang').value] = e.text }
+      alternates
     end
 
     def element_to_postal_code(element)
@@ -78,7 +85,7 @@ module Geonames
       toponym = Toponym.new
 
       toponym.name               = get_element_child_text(element,  'name')
-      toponym.alternate_names    = get_element_child_text(element,  'alternateNames')
+      toponym.alternate_names    = get_element_child_alternates(element, 'alternateName')
       toponym.latitude           = get_element_child_float(element, 'lat')
       toponym.longitude          = get_element_child_float(element, 'lng')
       toponym.geoname_id         = get_element_child_text(element,  'geonameId')
@@ -153,7 +160,7 @@ module Geonames
       url << search_criteria.to_query_params_string
 
       res = make_request(url, args)
-
+      
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/code") do |element|
@@ -260,6 +267,7 @@ module Geonames
       options = { :open_timeout => 60, :read_timeout => 60 }
       options.update(args.last.is_a?(Hash) ? args.pop : {})
 
+      pp url
       uri = URI.parse(url)
       req = Net::HTTP::Get.new("#{uri.path}?#{uri.query}", 'User-Agent' => USER_AGENT)
 

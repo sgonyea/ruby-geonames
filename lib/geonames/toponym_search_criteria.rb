@@ -23,5 +23,12 @@ module Geonames
                   :name_starts_with, :tag, :language, :style,
                   :feature_class, :feature_codes, :admin_code_1,
                   :max_rows, :start_row, :is_name_required
+
+    def initialize(params={})
+      params.each do |attr, value|
+        self.public_send("#{attr}=", value)
+      end if params
+    end 
+
   end
 end
