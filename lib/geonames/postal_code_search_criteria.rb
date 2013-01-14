@@ -29,9 +29,7 @@ module Geonames
       params.each do |attr, value|
         self.public_send("#{attr}=", value)
       end if params
-    end 
 
-    def initialize
       @is_or_operator = false
     end
 
