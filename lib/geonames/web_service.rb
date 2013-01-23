@@ -264,6 +264,7 @@ module Geonames
       url = Geonames.base_url + path_and_query
       url += "&username=#{Geonames.username}" if Geonames.username
       url += "&lang=#{Geonames.lang}"
+      url += "&token=#{Geonames.token}"       if Geonames.token
 
       options = { :open_timeout => 60, :read_timeout => 60 }
       options.update(args.last.is_a?(Hash) ? args.pop : {})
