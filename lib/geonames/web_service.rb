@@ -22,7 +22,6 @@ require 'cgi'
 require 'geonames'
 require 'net/http'
 require 'rexml/document'
-require 'awesome_print'
 
 module Geonames
   module WebService
