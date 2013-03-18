@@ -29,7 +29,7 @@ module Geonames
   autoload :Toponym,                  'geonames/toponym'
   autoload :ToponymSearchCriteria,    'geonames/toponym_search_criteria'
   autoload :ToponymSearchResult,      'geonames/toponym_search_result'
-  autoload :Version,                  'geonames/version'
+  autoload :VERSION,                  'geonames/version'
   autoload :WebService,               'geonames/web_service'
   autoload :WikipediaArticle,         'geonames/wikipedia_article'
 
