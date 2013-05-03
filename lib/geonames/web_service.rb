@@ -160,7 +160,7 @@ module Geonames
       url << search_criteria.to_query_params_string
 
       res = make_request(url, args)
-      
+
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/code") do |element|
@@ -257,6 +257,15 @@ module Geonames
       end
 
       timezone
+    end
+
+    def neighbourhood(lat, long, *args)
+      url = "/neighbourhood?lat=#{lat}&lng=#{long}"
+      res = make_request(url, args)
+      doc = REXML::Document.new res.body
+      doc.elements.collect("geonames/neighbourhood") do |element|
+        element_to_toponym(element)
+      end
     end
 
     def make_request(path_and_query, *args)

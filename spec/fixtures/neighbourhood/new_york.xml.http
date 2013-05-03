@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Date: Sun, 12 Feb 2012 03:48:24 GMT
+Server: Apache/2.2.17 (Linux/SUSE)
+Cache-Control: no-cache
+Access-Control-Allow-Origin: *
+Transfer-Encoding: chunked
+Content-Type: text/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<geonames>
+<neighbourhood>
+<countryCode>US</countryCode>
+<countryName>United States</countryName>
+<adminCode1>NY</adminCode1>
+<adminName1>New York</adminName1>
+<adminCode2>061</adminCode2>
+<adminName2>New York County</adminName2>
+<city>New York City-Manhattan</city>
+<name>Central Park</name>
+</neighbourhood>
+</geonames>
