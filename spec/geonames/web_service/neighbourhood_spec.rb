@@ -14,9 +14,9 @@ module Geonames
 
       it { should be_a_kind_of(Array) }
 
-      it "returns Toponym instance" do
+      it "returns Neighbourhood instance" do
         subject.each do |element|
-          element.should be_a_kind_of Toponym
+          element.should be_a_kind_of Neighbourhood
         end
       end
     end

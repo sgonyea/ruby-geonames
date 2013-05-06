@@ -152,6 +152,21 @@ module Geonames
       country_info
     end
 
+    def element_to_neighbourhood(element)
+      neighbourhood = Geonames::Neighbourhood.new
+
+      neighbourhood.country_code  = get_element_child_text(element,  'countryCode')
+      neighbourhood.country_name  = get_element_child_text(element,  'countryName')
+      neighbourhood.admin_code1   = get_element_child_text(element,  'adminCode1')
+      neighbourhood.admin_name1   = get_element_child_text(element,  'adminName1')
+      neighbourhood.admin_code2   = get_element_child_text(element,  'adminCode2')
+      neighbourhood.admin_name2   = get_element_child_text(element,  'adminName2')
+      neighbourhood.city          = get_element_child_text(element,  'city')
+      neighbourhood.name          = get_element_child_text(element,  'name')
+
+      neighbourhood
+    end
+
     def postal_code_search(search_criteria, *args)
       # postal codes to reutrn
       postal_codes = []
@@ -264,7 +279,7 @@ module Geonames
       res = make_request(url, args)
       doc = REXML::Document.new res.body
       doc.elements.collect("geonames/neighbourhood") do |element|
-        element_to_toponym(element)
+        element_to_neighbourhood(element)
       end
     end
 

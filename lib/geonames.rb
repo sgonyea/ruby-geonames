@@ -32,6 +32,7 @@ module Geonames
   autoload :ToponymSearchResult,      'geonames/toponym_search_result'
   autoload :WebService,               'geonames/web_service'
   autoload :WikipediaArticle,         'geonames/wikipedia_article'
+  autoload :Neighbourhood,            'geonames/neighbourhood'
 
   GEONAMES_SERVER = "http://ws.geonames.net"
   USER_AGENT      = "geonames ruby webservice client #{VERSION}"
