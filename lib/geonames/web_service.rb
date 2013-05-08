@@ -250,6 +250,30 @@ module Geonames
       intersection
     end
 
+    def find_nearest_intersection_osm(lat, long, *args)
+      url = "/findNearestIntersectionOSM?lat=#{lat}&lng=#{long}"
+
+      res = make_request(url, args)
+
+      doc = REXML::Document.new res.body
+
+      intersection = []
+
+      doc.elements.each("geonames/intersection") do |element|
+        intersection = Geonames::Osm::Intersection.new
+
+        intersection.street_1  = get_element_child_text(element,  'street1')
+        intersection.street_2  = get_element_child_text(element,  'street2')
+        intersection.highway_1 = get_element_child_text(element,  'highway1')
+        intersection.highway_2 = get_element_child_text(element,  'highway2')
+        intersection.distance  = get_element_child_float(element, 'distance')
+        intersection.longitude = get_element_child_float(element, 'lat')
+        intersection.latitude  = get_element_child_float(element, 'lng')
+      end
+
+      intersection
+    end
+
     def hierarchy(geonameId, *args)
       url = "/hierarchy?geonameId=#{geonameId.to_i}"
       res = make_request(url, args)

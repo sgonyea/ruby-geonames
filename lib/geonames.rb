@@ -24,6 +24,7 @@ module Geonames
   autoload :CountryInfo,              'geonames/country_info'
   autoload :CountrySubdivision,       'geonames/country_subdivision'
   autoload :Intersection,             'geonames/intersection'
+  autoload :Osm,                      'geonames/osm'
   autoload :PostalCode,               'geonames/postal_code'
   autoload :PostalCodeSearchCriteria, 'geonames/postal_code_search_criteria'
   autoload :Timezone,                 'geonames/timezone'
