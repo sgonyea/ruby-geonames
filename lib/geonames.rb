@@ -24,6 +24,7 @@ module Geonames
   autoload :CountryInfo,              'geonames/country_info'
   autoload :CountrySubdivision,       'geonames/country_subdivision'
   autoload :Intersection,             'geonames/intersection'
+  autoload :Osm,                      'geonames/osm'
   autoload :PostalCode,               'geonames/postal_code'
   autoload :PostalCodeSearchCriteria, 'geonames/postal_code_search_criteria'
   autoload :Timezone,                 'geonames/timezone'
@@ -32,6 +33,7 @@ module Geonames
   autoload :ToponymSearchResult,      'geonames/toponym_search_result'
   autoload :WebService,               'geonames/web_service'
   autoload :WikipediaArticle,         'geonames/wikipedia_article'
+  autoload :Neighbourhood,            'geonames/neighbourhood'
 
   GEONAMES_SERVER = "http://ws.geonames.net"
   USER_AGENT      = "geonames ruby webservice client #{VERSION}"

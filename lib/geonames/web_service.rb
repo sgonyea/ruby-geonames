@@ -152,6 +152,21 @@ module Geonames
       country_info
     end
 
+    def element_to_neighbourhood(element)
+      neighbourhood = Geonames::Neighbourhood.new
+
+      neighbourhood.country_code  = get_element_child_text(element,  'countryCode')
+      neighbourhood.country_name  = get_element_child_text(element,  'countryName')
+      neighbourhood.admin_code1   = get_element_child_text(element,  'adminCode1')
+      neighbourhood.admin_name1   = get_element_child_text(element,  'adminName1')
+      neighbourhood.admin_code2   = get_element_child_text(element,  'adminCode2')
+      neighbourhood.admin_name2   = get_element_child_text(element,  'adminName2')
+      neighbourhood.city          = get_element_child_text(element,  'city')
+      neighbourhood.name          = get_element_child_text(element,  'name')
+
+      neighbourhood
+    end
+
     def postal_code_search(search_criteria, *args)
       # postal codes to reutrn
       postal_codes = []
@@ -160,7 +175,7 @@ module Geonames
       url << search_criteria.to_query_params_string
 
       res = make_request(url, args)
-      
+
       doc = REXML::Document.new res.body
 
       doc.elements.each("geonames/code") do |element|
@@ -235,6 +250,30 @@ module Geonames
       intersection
     end
 
+    def find_nearest_intersection_osm(lat, long, *args)
+      url = "/findNearestIntersectionOSM?lat=#{lat}&lng=#{long}"
+
+      res = make_request(url, args)
+
+      doc = REXML::Document.new res.body
+
+      intersection = []
+
+      doc.elements.each("geonames/intersection") do |element|
+        intersection = Geonames::Osm::Intersection.new
+
+        intersection.street_1  = get_element_child_text(element,  'street1')
+        intersection.street_2  = get_element_child_text(element,  'street2')
+        intersection.highway_1 = get_element_child_text(element,  'highway1')
+        intersection.highway_2 = get_element_child_text(element,  'highway2')
+        intersection.distance  = get_element_child_float(element, 'distance')
+        intersection.longitude = get_element_child_float(element, 'lat')
+        intersection.latitude  = get_element_child_float(element, 'lng')
+      end
+
+      intersection
+    end
+
     def hierarchy(geonameId, *args)
       url = "/hierarchy?geonameId=#{geonameId.to_i}"
       res = make_request(url, args)
@@ -257,6 +296,15 @@ module Geonames
       end
 
       timezone
+    end
+
+    def neighbourhood(lat, long, *args)
+      url = "/neighbourhood?lat=#{lat}&lng=#{long}"
+      res = make_request(url, args)
+      doc = REXML::Document.new res.body
+      doc.elements.collect("geonames/neighbourhood") do |element|
+        element_to_neighbourhood(element)
+      end
     end
 
     def make_request(path_and_query, *args)
